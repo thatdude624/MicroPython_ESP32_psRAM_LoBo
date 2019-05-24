@@ -72,6 +72,7 @@
 // Embedded fonts
 extern uint8_t tft_SmallFont[];
 extern uint8_t tft_DefaultFont[];
+extern uint8_t tft_ConsoleFont[];
 extern uint8_t tft_Dejavu18[];
 extern uint8_t tft_Dejavu24[];
 extern uint8_t tft_Ubuntu16[];
@@ -1720,7 +1721,10 @@ static uint8_t getCharPtr(uint8_t c) {
   if (c == fontChar.charCode) {
     if (font_forceFixed > 0) {
       // fix width & offset for forced fixed width
-      fontChar.xDelta = cfont.max_x_size;
+	  if(font_forceFixed == 1)
+		  fontChar.xDelta = cfont.max_x_size;
+	  else
+		  fontChar.xDelta = font_forceFixed;
       fontChar.xOffset = (fontChar.xDelta - fontChar.width) / 2;
     }
   }
@@ -1803,6 +1807,7 @@ void TFT_setFont(uint8_t font, const char *font_file)
 	  else if (font == TOONEY32_FONT) cfont.font = tft_tooney32;
 	  else if (font == SMALL_FONT) cfont.font = tft_SmallFont;
 	  else if (font == DEF_SMALL_FONT) cfont.font = tft_def_small;
+	  else if (font == CONSOLE_FONT) cfont.font = tft_ConsoleFont;
 	  else cfont.font = tft_DefaultFont;
 
 	  cfont.bitmap = 1;

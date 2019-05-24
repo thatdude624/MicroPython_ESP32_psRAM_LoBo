@@ -201,6 +201,7 @@ extern const color_t TFT_PINK;
 #define DEF_SMALL_FONT	8
 #define FONT_7SEG		9
 #define USER_FONT		10  // font will be read from file
+#define CONSOLE_FONT	11
 
 #define IMAGE_TYPE_JPG	1
 #define IMAGE_TYPE_BMP	2

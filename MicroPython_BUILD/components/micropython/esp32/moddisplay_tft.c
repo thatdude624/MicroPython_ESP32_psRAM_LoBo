@@ -884,7 +884,7 @@ STATIC mp_obj_t display_tft_setFont(size_t n_args, const mp_obj_t *pos_args, mp_
 
     if (args[1].u_int >= 0) font_rotate = args[1].u_int;
     if (args[2].u_int >= 0) font_transparent = args[2].u_int & 1;
-    if (args[3].u_int >= 0) font_forceFixed = args[3].u_int & 1;
+    if (args[3].u_int >= 0) font_forceFixed = args[3].u_int;
 
     if (font == FONT_7SEG) {
         set_7seg_font_atrib(args[4].u_int, args[5].u_int, (int)args[6].u_bool, intToColor(args[7].u_int));
@@ -968,7 +968,7 @@ STATIC mp_obj_t display_tft_print(size_t n_args, const mp_obj_t *pos_args, mp_ma
     if (args[3].u_int >= 0) _fg = intToColor(args[3].u_int);
     if (args[4].u_int >= 0) font_rotate = args[4].u_int;
     if (args[5].u_int >= 0) font_transparent = args[5].u_int & 1;
-    if (args[6].u_int >= 0) font_forceFixed = args[6].u_int & 1;
+    if (args[6].u_int >= 0) font_forceFixed = args[6].u_int;
     if (args[7].u_int >= 0) text_wrap = args[7].u_int & 1;
     if (args[8].u_int >= 0) _bg = intToColor(args[8].u_int);
 
@@ -1649,6 +1649,7 @@ STATIC const mp_rom_map_elem_t display_tft_locals_dict_table[] = {
 
     { MP_ROM_QSTR(MP_QSTR_FONT_Default),        MP_ROM_INT(DEFAULT_FONT) },
     { MP_ROM_QSTR(MP_QSTR_FONT_DejaVu18),       MP_ROM_INT(DEJAVU18_FONT) },
+	//{ MP_ROM_QSTR(MP_QSTR_FONT_Console),        MP_ROM_INT(CONSOLE_FONT) },
     { MP_ROM_QSTR(MP_QSTR_FONT_DejaVu24),       MP_ROM_INT(DEJAVU24_FONT) },
     { MP_ROM_QSTR(MP_QSTR_FONT_Ubuntu),         MP_ROM_INT(UBUNTU16_FONT) },
     { MP_ROM_QSTR(MP_QSTR_FONT_Comic),          MP_ROM_INT(COMIC24_FONT) },

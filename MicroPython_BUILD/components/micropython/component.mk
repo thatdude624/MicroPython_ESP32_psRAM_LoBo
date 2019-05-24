@@ -269,6 +269,7 @@ LIBS_SRC_C += \
 	esp32/libs/tft/tft.c \
 	esp32/libs/tft/comic24.c \
 	esp32/libs/tft/DefaultFont.c \
+	esp32/libs/tft/consoleFont.c \
 	esp32/libs/tft/DejaVuSans18.c \
 	esp32/libs/tft/DejaVuSans24.c \
 	esp32/libs/tft/minya24.c \
