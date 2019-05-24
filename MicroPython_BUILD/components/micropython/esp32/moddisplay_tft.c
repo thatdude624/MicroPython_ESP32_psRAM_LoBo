@@ -1649,7 +1649,7 @@ STATIC const mp_rom_map_elem_t display_tft_locals_dict_table[] = {
 
     { MP_ROM_QSTR(MP_QSTR_FONT_Default),        MP_ROM_INT(DEFAULT_FONT) },
     { MP_ROM_QSTR(MP_QSTR_FONT_DejaVu18),       MP_ROM_INT(DEJAVU18_FONT) },
-	//{ MP_ROM_QSTR(MP_QSTR_FONT_Console),        MP_ROM_INT(CONSOLE_FONT) },
+	{ MP_ROM_QSTR(MP_QSTR_FONT_Console),        MP_ROM_INT(CONSOLE_FONT) },
     { MP_ROM_QSTR(MP_QSTR_FONT_DejaVu24),       MP_ROM_INT(DEJAVU24_FONT) },
     { MP_ROM_QSTR(MP_QSTR_FONT_Ubuntu),         MP_ROM_INT(UBUNTU16_FONT) },
     { MP_ROM_QSTR(MP_QSTR_FONT_Comic),          MP_ROM_INT(COMIC24_FONT) },
